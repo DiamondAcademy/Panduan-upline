@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond Academy — Panduan Upline 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #7F77DD; --purple-dark: #534AB7; --purple-deeper: #3C3489;
+    --purple-light: #EEEDFE; --purple-mid: #CECBF6;
+    --green: #1D9E75; --green-dark: #0F6E56; --green-deeper: #085041; --green-light: #E1F5EE;
+    --blue: #378ADD; --blue-light: #E6F1FB;
+    --amber: #BA7517; --amber-light: #FAEEDA;
+    --coral: #D85A30; --coral-light: #FAECE7;
+    --red-light: #FCEBEB; --red: #A32D2D;
+    --gray-100: #F5F5F3; --gray-200: #E8E8E4;
+    --text: #1A1A18; --text-muted: #5F5E5A; --text-faint: #9B9B96;
+    --border: rgba(0,0,0,0.09);
+    --shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04);
+    --radius: 12px; --radius-sm: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; background: #F7F7F5; color: var(--text); min-height: 100vh; font-size: 17px; line-height: 1.6; }
+  .topbar { background: var(--purple-deeper); padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .topbar-brand { display: flex; align-items: center; gap: 8px; }
+  .topbar-diamond { font-size: 18px; color: var(--purple-mid); }
+  .topbar-name { font-size: 13px; font-weight: 600; color: #fff; }
+  .topbar-sub { font-size: 11px; color: rgba(255,255,255,0.6); }
+  .hero { background: linear-gradient(160deg, var(--purple-deeper) 0%, var(--purple-dark) 60%, var(--purple) 100%); padding: 40px 20px 50px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: '◆'; position: absolute; font-size: 200px; color: rgba(255,255,255,0.04); right: -30px; top: -20px; line-height: 1; }
+  .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); color: #fff; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; }
+  .hero h1 { font-size: 26px; font-weight: 600; color: #fff; margin-bottom: 8px; line-height: 1.3; }
+  .hero p { font-size: 14px; color: rgba(255,255,255,0.75); max-width: 360px; margin: 0 auto; }
+  .tab-nav { background: #fff; border-bottom: 1px solid var(--border); padding: 0 16px; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; position: sticky; top: 44px; z-index: 90; }
+  .tab-nav::-webkit-scrollbar { display: none; }
+  .tab-btn { padding: 11px 14px; border: none; background: none; cursor: pointer; white-space: nowrap; font-size: 12px; font-weight: 500; color: var(--text-muted); border-bottom: 2px solid transparent; transition: all .15s; font-family: inherit; flex-shrink: 0; }
+  .tab-btn.active { border-bottom-color: var(--purple); color: var(--purple-deeper); font-weight: 600; }
+  .content { max-width: 600px; margin: 0 auto; padding: 20px 16px 80px; }
+  .tab { display: none; } .tab.show { display: block; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 12px; box-shadow: var(--shadow); }
+  .card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  .card p, .card li { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+  .card ul { padding-left: 16px; }
+  .card-purple { border-left: 3px solid var(--purple); }
+  .card-green { border-left: 3px solid var(--green); }
+  .card-amber { border-left: 3px solid var(--amber); }
+  .card-red { border-left: 3px solid var(--coral); }
+  .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  .badge { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: .04em; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px; }
+  .bp { background: var(--purple-light); color: var(--purple-deeper); }
+  .bt { background: var(--green-light); color: var(--green-deeper); }
+  .ba { background: var(--amber-light); color: #4A2D00; }
+  .bred { background: var(--red-light); color: #7F1D1D; }
+  .tl { padding: 4px 0; }
+  .tl-item { display: flex; gap: 14px; align-items: flex-start; position: relative; }
+  .tl-item:not(:last-child)::after { content: ''; position: absolute; left: 15px; top: 31px; width: 2px; bottom: -12px; background: var(--gray-200); }
+  .tl-left { flex-shrink: 0; }
+  .tl-dot { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #fff; z-index: 1; position: relative; }
+  .dp { background: var(--purple); } .dt { background: var(--green); } .da { background: var(--amber); } .dc { background: var(--coral); } .db { background: var(--blue); }
+  .tl-right { flex: 1; padding-bottom: 20px; }
+  .tl-time { font-size: 10px; font-weight: 700; color: var(--text-faint); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 4px; }
+  .tl-right h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 5px; }
+  .tl-right p, .tl-right li { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+  .tl-right ul { padding-left: 14px; }
+  .sb { background: var(--gray-100); border-radius: var(--radius-sm); padding: 13px; margin-bottom: 10px; }
+  .sb .sl { font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 6px; }
+  .sb p { font-size: 14px; color: var(--text); line-height: 1.75; font-style: italic; }
+  .sb .tip { font-size: 12px; color: var(--text-faint); margin-top: 8px; font-style: normal; padding-top: 8px; border-top: 1px solid var(--border); }
+  .ci { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); cursor: pointer; }
+  .ci:last-child { border-bottom: none; }
+  .ci-box { min-width: 20px; height: 20px; border: 2px solid var(--gray-200); border-radius: 5px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: all .2s; margin-top: 1px; }
+  .ci-box.on { background: var(--purple); border-color: var(--purple); }
+  .ci-chk { font-size: 11px; color: #fff; display: none; font-weight: 700; }
+  .ci-box.on .ci-chk { display: block; }
+  .ci-txt h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; transition: all .2s; }
+  .ci-txt p { font-size: 13px; color: var(--text-muted); }
+  .ci.done .ci-txt h4 { color: var(--text-faint); text-decoration: line-through; }
+  .step-row { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
+  .step-row:last-child { margin-bottom: 0; }
+  .sn { min-width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #fff; flex-shrink: 0; margin-top: 1px; }
+  .sn-p { background: var(--purple); } .sn-g { background: var(--green); } .sn-a { background: var(--amber); } .sn-c { background: var(--coral); }
+  .sc h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+  .sc p { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+  .wrow { display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid var(--border); }
+  .wrow:last-child { border-bottom: none; }
+  .wd { font-size: 11px; font-weight: 600; color: var(--text-faint); min-width: 70px; padding-top: 2px; }
+  .wa h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .wa p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .status-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+  .st { border-radius: var(--radius-sm); padding: 12px; text-align: center; }
+  .st-ok { background: var(--green-light); border: 1px solid #9FE1CB; }
+  .st-warn { background: var(--amber-light); border: 1px solid #FAC775; }
+  .st-red { background: var(--red-light); border: 1px solid #FCA5A5; }
+  .st-ok h4 { font-size: 12px; font-weight: 600; color: var(--green-deeper); margin-bottom: 4px; }
+  .st-ok p { font-size: 11px; color: var(--green-dark); line-height: 1.5; }
+  .st-warn h4 { font-size: 12px; font-weight: 600; color: #633806; margin-bottom: 4px; }
+  .st-warn p { font-size: 11px; color: var(--amber); line-height: 1.5; }
+  .st-red h4 { font-size: 12px; font-weight: 600; color: #7F1D1D; margin-bottom: 4px; }
+  .st-red p { font-size: 11px; color: var(--red); line-height: 1.5; }
+  .st-icon { font-size: 20px; margin-bottom: 5px; }
+  .co-row { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+  .co-row:last-child { margin-bottom: 0; }
+  .co-label { font-size: 12px; color: var(--text-muted); min-width: 150px; }
+  .co-bar-wrap { flex: 1; height: 8px; background: var(--gray-200); border-radius: 4px; overflow: hidden; }
+  .co-bar { height: 100%; border-radius: 4px; }
+  .cb-g { background: var(--green); } .cb-p { background: var(--purple); }
+  .co-pts { font-size: 12px; font-weight: 600; color: var(--text-muted); min-width: 50px; text-align: right; }
+  .alert { border-radius: var(--radius-sm); padding: 13px; margin-bottom: 10px; }
+  .alert-r { background: var(--red-light); } .alert-g { background: var(--green-light); } .alert-a { background: var(--amber-light); }
+  .alert-r h4 { font-size: 14px; font-weight: 600; color: #7F1D1D; margin-bottom: 6px; }
+  .alert-r p, .alert-r li { font-size: 13px; color: #991B1B; line-height: 1.65; }
+  .alert-g h4 { font-size: 14px; font-weight: 600; color: var(--green-deeper); margin-bottom: 6px; }
+  .alert-g p { font-size: 13px; color: var(--green-dark); line-height: 1.65; }
+  .alert-a h4 { font-size: 14px; font-weight: 600; color: #633806; margin-bottom: 6px; }
+  .alert-a p { font-size: 13px; color: var(--amber); line-height: 1.65; }
+  .alert-r ul, .alert-g ul, .alert-a ul { padding-left: 14px; }
+  .prog-text { font-size: 12px; color: var(--text-faint); margin-top: 6px; }
+  .sec { font-size: 10px; font-weight: 700; color: var(--text-faint); letter-spacing: .08em; text-transform: uppercase; margin: 16px 0 8px; }
+  @media (max-width: 420px) { .g2 { grid-template-columns: 1fr; } .status-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 22px; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-brand">
+    <div class="topbar-diamond">◆</div>
+    <div><div class="topbar-name">Diamond Academy</div><div class="topbar-sub">Panduan Upline 2026</div></div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-badge">Khusus Upline</div>
+  <h1>Protokol Anggota Baru</h1>
+  <p>Apa yang perlu kamu lakukan dari saat anggota baru bergabung hingga akhir siklus pertama mereka</p>
+</div>
+
+<div class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('h48',this)">48 Jam Pertama</button>
+  <button class="tab-btn" onclick="showTab('w1',this)">Minggu 1–4</button>
+  <button class="tab-btn" onclick="showTab('clubone',this)">Pantau Club One</button>
+  <button class="tab-btn" onclick="showTab('skrip',this)">Skrip Upline</button>
+  <button class="tab-btn" onclick="showTab('rules',this)">Peraturan</button>
+</div>
+
+<div class="content">
+
+<div class="tab show" id="t-h48">
+  <div class="card card-purple">
+    <h3>Prinsip utama</h3>
+    <p>Kecepatan adalah segalanya dalam 48 jam pertama. Anggota baru yang lambat memulai akan mulai ragu-ragu. Tugas kamu adalah memastikan mereka bergerak sebelum keraguan datang.</p>
+  </div>
+  <div class="sec">Timeline tindakan — dari jam 0 hingga jam 48</div>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot dp">J0</div></div>
+      <div class="tl-right">
+        <div class="tl-time">Dalam 2 jam setelah anggota bergabung</div>
+        <h4>Panggilan Welcome — telepon, bukan chat</h4>
+        <ul>
+          <li>Ucapkan selamat dengan penuh semangat</li>
+          <li>Tanya WHY mereka bergabung — dengarkan dan simpan di catatan</li>
+          <li>Katakan: "Saya akan tunjukkan step by step. Ikuti sistem ini, insya Allah berhasil."</li>
+          <li>Konfirmasi mereka bisa hadir KKP besok jam 07.00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot dt">J2</div></div>
+      <div class="tl-right">
+        <div class="tl-time">2 jam setelah panggilan welcome</div>
+        <h4>Kirim Starter Kit + satu pesan arahan saja</h4>
+        <ul>
+          <li>Kirim link Starter Kit Diamond Academy</li>
+          <li>Kirim link KKP Zoom dan link Discover ASEA</li>
+          <li>Satu kalimat: "Selesaikan 6 modul ini dalam 48 jam. Mulai dengan Modul 1 sekarang."</li>
+          <li>Jangan kirim PDF lain, video lain, atau info tambahan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot da">J8</div></div>
+      <div class="tl-right">
+        <div class="tl-time">8 jam setelah bergabung</div>
+        <h4>Buat daftar 10 nama bersama-sama</h4>
+        <ul>
+          <li>Telepon dan minta mereka buka catatan HP sekarang</li>
+          <li>Bantu tulis 10 nama — keluarga, tetangga, teman, kenalan lama</li>
+          <li>Pilih bersama SATU orang yang paling mudah dihubungi dulu</li>
+          <li>Ajarkan skrip buka percakapan dari Modul 5 Starter Kit</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot dt">J24</div></div>
+      <div class="tl-right">
+        <div class="tl-time">24 jam setelah bergabung</div>
+        <h4>Cek kehadiran KKP pertama</h4>
+        <ul>
+          <li>Kirim pesan sebelum KKP: "KKP pagi ini jam 7 — join ya?"</li>
+          <li>Setelah KKP tanya: "Gimana? Bisa merasakan suasana tim?"</li>
+          <li>Kalau tidak hadir — cari tahu hambatannya dan bantu selesaikan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot da">J36</div></div>
+      <div class="tl-right">
+        <div class="tl-time">36 jam setelah bergabung</div>
+        <h4>Lakukan expose pertama bersama — 3-way call</h4>
+        <ul>
+          <li>Pilih satu orang dari daftar 10 nama mereka</li>
+          <li>Lakukan 3-way call bersama — kamu yang bicara, mereka perhatikan</li>
+          <li>Setelah call, debrief: "Lihat kan cara saya tadi? Kamu bisa lakukan hal yang sama."</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot dc">J48</div></div>
+      <div class="tl-right">
+        <div class="tl-time">48 jam setelah bergabung — wajib</div>
+        <h4>Check-in 48 Jam — 3 pertanyaan saja</h4>
+        <ul>
+          <li>"Sudah minum ASEA Redox?"</li>
+          <li>"Sudah hadir KKP?"</li>
+          <li>"Sudah selesaikan berapa modul Starter Kit?"</li>
+        </ul>
+        <p style="margin-top:6px">3/3 — rayakan dan lanjut ke Minggu 1. Ada yang belum — cari hambatannya dan selesaikan sebelum melanjutkan.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sec">Checklist upline — 48 jam</div>
+  <div class="card" id="cl48">
+    <div class="ci" onclick="tick48(this,0)"><div class="ci-box"><span class="ci-chk">✓</span></div><div class="ci-txt"><h4>Panggilan welcome dilakukan dalam 2 jam</h4><p>Telepon — bukan chat. WHY mereka disimpan di catatan.</p></div></div>
+    <div class="ci" onclick="tick48(this,1)"><div class="ci-box"><span class="ci-chk">✓</span></div><div class="ci-txt"><h4>Starter Kit dikirim dengan arahan jelas</h4><p>Link kit + link KKP + link Discover ASEA. Satu pesan saja.</p></div></div>
+    <div class="ci" onclick="tick48(this,2)"><div class="ci-box"><span class="ci-chk">✓</span></div><div class="ci-txt"><h4>Daftar 10 nama dibuat bersama-sama</h4><p>Bukan disuruh buat sendiri. Buat bersama dalam satu panggilan.</p></div></div>
+    <div class="ci" onclick="tick48(this,3)"><div class="ci-box"><span class="ci-chk">✓</span></div><div class="ci-txt"><h4>KKP pertama dikonfirmasi</h4><p>Jika tidak hadir, cari tahu kenapa dan selesaikan.</p></div></div>
+    <div class="ci" onclick="tick48(this,4)"><div class="ci-box"><span class="ci-chk">✓</span></div><div class="ci-txt"><h4>3-way call pertama dilakukan bersama</h4><p>Kamu yang bicara. Anggota baru memperhatikan dan belajar.</p></div></div>
+    <div class="ci" onclick="tick48(this,5)"><div class="ci-box"><span class="ci-chk">✓</span></div><div class="ci-txt"><h4>Bonus D300 (USD$300) dijelaskan saat panggilan welcome</h4><p>Anggota baru memahami syarat: D300 dua kali dalam 4 minggu + 1.200 PGV kumulatif, dalam 90 hari pertama.</p></div></div>
+    <div class="ci" onclick="tick48(this,6)"><div class="ci-box"><span class="ci-chk">✓</span></div><div class="ci-txt"><h4>Check-in 48 jam selesai — 3 pertanyaan dijawab</h4><p>Catat jawaban. Selesaikan hambatan jika ada.</p></div></div>
+  </div>
+  <div class="prog-text" id="p48">0 / 7 selesai</div>
+</div>
+
+<div class="tab" id="t-w1">
+  <div class="sec">Minggu 1 — fondasi dan kepercayaan</div>
+  <div class="card">
+    <div class="wrow"><div class="wd">Senin</div><div class="wa"><h4>Cek kehadiran KKP</h4><p>Kirim pesan pengingat sebelum jam 7. Tanya "Sudah join KKP pagi ini?"</p></div></div>
+    <div class="wrow"><div class="wd">Selasa</div><div class="wa"><h4>Ajak ke Discover ASEA malam ini</h4><p>"Malam ini ada Discover ASEA jam 9. Kamu join — bawa satu orang dari daftar 10 nama itu kalau bisa."</p></div></div>
+    <div class="wrow"><div class="wd">Rabu</div><div class="wa"><h4>Cek expose pertama mereka</h4><p>Tanya: "Sudah hubungi siapa dari daftar itu?" Kalau sudah — debrief. Kalau belum — cari hambatannya.</p></div></div>
+    <div class="wrow"><div class="wd">Jumat</div><div class="wa"><h4>Discover ASEA + check-in mingguan</h4><p>3 pertanyaan: Berapa expose dilakukan? Sudah minum produk konsisten? Apa hambatan minggu ini?</p></div></div>
+    <div class="wrow"><div class="wd">Minggu</div><div class="wa"><h4>Pesan motivasi singkat</h4><p>Satu kalimat. Ingatkan mereka tentang WHY mereka yang kamu simpan saat panggilan welcome.</p></div></div>
+  </div>
+  <div class="sec">Minggu 2 — bangun kebiasaan expose</div>
+  <div class="card">
+    <div class="step-row"><div class="sn sn-p">F</div><div class="sc"><h4>Anggota melakukan expose SENDIRI minggu ini</h4><p>Minggu 1 kamu lakukan bersama mereka. Minggu 2, mereka coba sendiri. Kamu standby untuk dukungan — bukan untuk melakukannya untuk mereka.</p></div></div>
+    <div class="step-row"><div class="sn sn-g">1</div><div class="sc"><h4>1-on-1 seminggu sekali — 15 menit saja</h4><p>Cek angka. Beri SATU tindakan untuk menyelesaikan satu hambatan. Rayakan satu kemenangan.</p></div></div>
+    <div class="step-row"><div class="sn sn-g">2</div><div class="sc"><h4>Rayakan keberhasilan pertama secara terbuka</h4><p>Pelanggan pertama atau pendaftaran pertama — umumkan di grup tim. Ini membangun kepercayaan diri lebih dari pelatihan apapun.</p></div></div>
+  </div>
+  <div class="sec">Minggu 3 — target poin Club One + pantau Bonus D300</div>
+  <div class="card">
+    <div class="step-row"><div class="sn sn-a">!</div><div class="sc"><h4>Cek status poin Club One mereka</h4><p>Pada minggu ke-3, mereka perlu minimal 5–6 poin untuk mencapai 8 poin sebelum akhir siklus.</p></div></div>
+    <div class="step-row"><div class="sn sn-a">S</div><div class="sc"><h4>Cara cepat tambah poin</h4><p>1 pelanggan langganan 50+ PV = 3 poin. 1 Brand Partner 100+ PV = 4 poin. Gabungkan = 7 poin. Tambah 1 lagi = Club One.</p></div></div>
+    <div class="step-row"><div class="sn sn-g">$</div><div class="sc"><h4>Cek posisi Bonus D300 mereka</h4><p>Tanya: "Sudah capai D300 berapa kali sejauh ini?" Kalau belum pernah — fokus minggu ini untuk capai D300 pertama. Kalau sudah sekali — dorong untuk capai lagi minggu ini. Jendela 90 hari semakin sempit — berikan urgensi yang positif.</p></div></div>
+  </div>
+  <div class="sec">Minggu 4 — tutup siklus pertama</div>
+  <div class="card">
+    <div class="step-row"><div class="sn sn-g">✓</div><div class="sc"><h4>Cek poin akhir — capai Club One?</h4><p>Kalau kurang — bantu carikan cara tambah poin di hari-hari terakhir siklus.</p></div></div>
+    <div class="step-row"><div class="sn sn-g">✓</div><div class="sc"><h4>Rayakan pencapaian Club One — wajib</h4><p>Umumkan di grup. Tag nama mereka. Ceritakan perjalanan mereka dalam 4 minggu pertama.</p></div></div>
+    <div class="step-row"><div class="sn sn-g">✓</div><div class="sc"><h4>Tetapkan target siklus ke-2 bersama</h4><p>Tanya: "Siklus depan kita mau target berapa poin?" Biarkan mereka yang menetapkan targetnya sendiri.</p></div></div>
+    <div class="step-row"><div class="sn sn-c">!</div><div class="sc"><h4>Kalau tidak capai Club One — jangan diabaikan</h4><p>Cari tahu kenapa. 3 alasan umum: tidak melakukan expose, tidak hadir KKP, atau hambatan eksternal. Selesaikan dengan tindakan konkret.</p></div></div>
+  </div>
+</div>
+
+<div class="tab" id="t-clubone">
+  <div class="sec">Status anggota di bawah kamu — 3 kategori</div>
+  <div class="status-grid">
+    <div class="st st-ok"><div class="st-icon">●</div><h4>Hijau</h4><p>5+ poin minggu ke-3. Expose konsisten. Hadir KKP. Butuh pengakuan saja.</p></div>
+    <div class="st st-warn"><div class="st-icon">◐</div><h4>Kuning</h4><p>3–4 poin minggu ke-3. Expose tidak konsisten. Perlu coaching segera.</p></div>
+    <div class="st st-red"><div class="st-icon">○</div><h4>Merah</h4><p>Kurang 3 poin. Tidak hadir KKP. Tidak expose. Perlu telepon segera.</p></div>
+  </div>
+  <div class="sec">Cara paling mudah capai 8 poin</div>
+  <div class="card">
+    <div class="co-row"><div class="co-label">1 Brand Partner baru (100+ PV)</div><div class="co-bar-wrap"><div class="co-bar cb-g" style="width:50%"></div></div><div class="co-pts">4 poin</div></div>
+    <div class="co-row"><div class="co-label">1 Pelanggan langganan (50+ PV)</div><div class="co-bar-wrap"><div class="co-bar cb-g" style="width:37%"></div></div><div class="co-pts">3 poin</div></div>
+    <div class="co-row"><div class="co-label">1 Upgrade pelanggan ke BP</div><div class="co-bar-wrap"><div class="co-bar cb-g" style="width:12%"></div></div><div class="co-pts">1 poin</div></div>
+    <div class="co-row"><div class="co-label" style="font-weight:600;color:var(--green-deeper)">Total: Club One ✓</div><div class="co-bar-wrap"><div class="co-bar cb-g" style="width:100%"></div></div><div class="co-pts" style="color:var(--green);font-weight:700">8 poin</div></div>
+  </div>
+  <div class="sec">Cara capai 15 poin — Club One+</div>
+  <div class="card">
+    <div class="co-row"><div class="co-label">2 Brand Partner baru</div><div class="co-bar-wrap"><div class="co-bar cb-p" style="width:53%"></div></div><div class="co-pts">8 poin</div></div>
+    <div class="co-row"><div class="co-label">2 Pelanggan langganan</div><div class="co-bar-wrap"><div class="co-bar cb-p" style="width:40%"></div></div><div class="co-pts">6 poin</div></div>
+    <div class="co-row"><div class="co-label" style="font-weight:600;color:var(--purple-deeper)">Total: Club One+ ✓</div><div class="co-bar-wrap"><div class="co-bar cb-p" style="width:93%"></div></div><div class="co-pts" style="color:var(--purple);font-weight:700">14 poin</div></div>
+  </div>
+  <div class="sec">4 pertanyaan coaching setiap minggu</div>
+  <div class="card">
+    <div class="step-row"><div class="sn sn-p">1</div><div class="sc"><h4>"Berapa orang yang sudah kamu expose minggu ini?"</h4><p>Pertanyaan pertama setiap kali. Kalau jawabannya nol — berhenti di sini dan selesaikan hambatan ini dulu.</p></div></div>
+    <div class="step-row"><div class="sn sn-p">2</div><div class="sc"><h4>"Siapa yang paling tertarik dari expose itu?"</h4><p>Identifikasi prospek panas. Fokuskan waktu pada orang yang sudah menunjukkan minat.</p></div></div>
+    <div class="step-row"><div class="sn sn-p">3</div><div class="sc"><h4>"Sudah ajak siapa ke Discover ASEA?"</h4><p>Discover ASEA adalah konverter terbaik dari prospek menjadi pendaftaran. Kalau belum — tetapkan nama dan tanggal bersama sekarang.</p></div></div>
+    <div class="step-row"><div class="sn sn-p">4</div><div class="sc"><h4>"Berapa poin kamu sekarang?"</h4><p>Biarkan mereka menghitung sendiri. Bangun kesadaran diri tentang kinerja — bukan bergantung pada upline untuk memberitahu.</p></div></div>
+  </div>
+  <div class="alert alert-a">
+    <h4>Kekuatan poin Mentor</h4>
+    <p>Kalau kamu bantu 2 anggota bawah capai Club One siklus ini — kamu dapat 10 poin Mentor masuk siklus depan tanpa perlu banyak pendaftaran baru. Inilah kekuatan duplikasi yang sesungguhnya.</p>
+  </div>
+</div>
+
+<div class="tab" id="t-skrip">
+  <div class="sec">Skrip 1 — panggilan welcome (jam 0)</div>
+  <div class="sb"><div class="sl">Telepon dalam 2 jam</div><p>"[Nama]! Selamat — kamu baru saja membuat keputusan yang tepat. Saya [nama], saya akan jadi mentor kamu di Diamond Academy. Saya mau tanya satu pertanyaan dulu — kenapa kamu bergabung dengan ASEA? Apa yang kamu harap bisa berubah?"</p><div class="tip">Dengarkan dengan seksama. Simpan jawaban WHY — kamu akan gunakan ini saat mereka mulai kehilangan semangat nanti.</div></div>
+  <div class="sb"><div class="sl">Sambungan setelah mendengar WHY</div><p>"Oke, saya mengerti. Itu alasan yang kuat. Saya mau pastikan kamu sampai ke sana. Sistemnya mudah — ada 6 modul Starter Kit yang perlu kamu selesaikan dalam 48 jam. Saya kirim linknya sekarang. Dan besok pagi, join KKP jam 7. Bisa?"</p></div>
+  <div class="sb"><div class="sl">Perkenalkan Bonus D300 — wajib disebut dalam panggilan pertama</div><p>"Satu lagi yang saya mau kamu tahu dari hari pertama — dalam 90 hari ini, ASEA ada menyediakan Bonus khusus USD$300 untuk anggota baru yang bergerak cepat. Cara mencapainya mudah — capai D300 dua kali dalam empat minggu dengan 1.200 PGV. Saya akan tunjukkan step by step bagaimana mencapainya. Tapi yang penting — jendela 90 hari dimulai dari hari ini. Kita mulai sekarang ya?"</p><div class="tip">Ini bukan tekanan — ini peluang. Nada kamu harus semangat dan yakin. Bonus ini nyata dan bisa dicapai dalam 90 hari pertama.</div></div>
+
+  <div class="sec">Skrip 2 — kirim Starter Kit (jam 2)</div>
+  <div class="sb"><div class="sl">Pesan WhatsApp</div><p>"[Nama], ini link Starter Kit kamu: [link kit]<br><br>KKP pagi: zoom.us/j/88528641899 · Passcode: redox2024 · Jam 07.00<br><br>Discover ASEA: zoom.us/j/82624771289 · Passcode: redox2024 · Selasa &amp; Jumat jam 21.00<br><br>Ada pertanyaan — WhatsApp saya langsung."</p><div class="tip">Jangan tambahkan apa-apa lagi. Satu pesan ini saja.</div></div>
+
+  <div class="sec">Skrip 3 — buat daftar 10 nama (jam 8)</div>
+  <div class="sb"><div class="sl">Panggilan atau voice note</div><p>"[Nama], boleh kita lakukan satu hal sebentar? Buka catatan di HP kamu sekarang. Kita mau tulis 10 nama orang yang kamu kenal — tidak perlu pikir apakah mereka tertarik atau tidak. Tulis saja dulu."</p><div class="tip">Lakukan bersama dalam panggilan — jangan disuruh lakukan sendiri. Tidak lebih dari 15 menit.</div></div>
+
+  <div class="sec">Skrip 4 — check-in 48 jam</div>
+  <div class="sb"><div class="sl">Panggilan 48 jam</div><p>"[Nama], sudah 48 jam kamu bergabung. Saya mau cek tiga hal saja — satu, sudah minum ASEA Redox? Dua, sudah hadir KKP? Tiga, sudah selesaikan berapa modul Starter Kit?"</p><div class="tip">Kalau 3/3 — rayakan. Kalau ada yang belum — tanya "apa yang menghalangi?" bukan "kenapa tidak dilakukan?"</div></div>
+
+  <div class="sec">Skrip 5 — saat anggota kehilangan semangat</div>
+  <div class="sb"><div class="sl">Saat tidak melakukan expose atau tidak hadir KKP</div><p>"[Nama], saya perhatikan beberapa hari ini kamu tidak terlihat di KKP. Saya ingat kembali apa yang kamu katakan saat pertama bergabung — kamu bilang kamu bergabung karena [WHY mereka]. Apakah hal itu masih penting bagimu?"</p><div class="tip">Gunakan WHY mereka yang kamu simpan dari panggilan welcome. Ini jauh lebih efektif dari motivasi kosong.</div></div>
+
+  <div class="sec">Skrip 6 — saat hampir capai Club One</div>
+  <div class="sb"><div class="sl">Saat ada 5–6 poin</div><p>"[Nama], kamu sudah punya [X] poin. Tinggal [Y] poin lagi untuk Club One. Kalau kamu daftarkan satu pelanggan langganan minggu ini — langsung dapat 3 poin lagi. Siapa dari daftar 10 nama kamu yang paling cocok untuk ditawarkan produk minggu ini?"</p></div>
+
+  <div class="sec">Skrip 7 — dorong capai Bonus D300</div>
+  <div class="sb"><div class="sl">Saat mereka sudah capai D300 sekali (minggu 2–3)</div><p>"[Nama], selamat — kamu sudah capai D300 minggu lalu! Kamu ada di jalur yang benar. Sekarang kita mau capai sekali lagi dalam periode 4 minggu ini — dan pastikan PGV kumulatif kita mencapai 1.200. Kalau berhasil, ASEA akan kirim USD$300 langsung ke akun kamu. Siapa dari daftar 10 nama kamu yang bisa kita fokuskan minggu ini?"</p><div class="tip">Jangan sebut bonus sebagai tekanan. Sebut sebagai peluang yang mereka sudah hampir capai. Momentum positif.</div></div>
+  <div class="sb"><div class="sl">Saat waktu hampir habis (minggu 10–12 dari tanggal bergabung)</div><p>"[Nama], kita masih punya sekitar [X] minggu lagi dalam jendela 90 hari. Bonus D300 masih bisa dicapai. Saya mau kita buat rencana konkret untuk minggu ini — berapa pendaftaran yang kita butuhkan untuk capai D300 lagi? Ayo kita hitung bersama."</p><div class="tip">Jika jendela 90 hari sudah berlalu tanpa berhasil — jangan menyalahkan mereka. Fokus pada target Club One berikutnya dan target D300 berikutnya untuk manfaat ranking.</div></div>
+</div>
+
+<div class="tab" id="t-rules">
+  <div class="sec">5 peraturan yang wajib diikuti</div>
+  <div class="card card-purple">
+    <div class="step-row"><div class="sn sn-p">1</div><div class="sc"><h4>Telepon dalam 2 jam — bukan chat, bukan besok</h4><p>Panggilan welcome adalah tanggung jawab nomor satu kamu. Kalau tidak bisa telepon dalam 2 jam — beritahu anggota baru dan tetapkan waktu yang spesifik.</p></div></div>
+    <div class="step-row"><div class="sn sn-p">2</div><div class="sc"><h4>Satu Starter Kit. Satu arahan. Tidak lebih.</h4><p>Jangan kirim tambahan video, PDF, atau link lain dalam 48 jam pertama. Terlalu banyak informasi membunuh momentum.</p></div></div>
+    <div class="step-row"><div class="sn sn-p">3</div><div class="sc"><h4>Lakukan bersama — jangan disuruh lakukan sendiri</h4><p>Daftar 10 nama, expose pertama, 3-way call pertama — semua perlu dilakukan bersama-sama untuk pertama kalinya.</p></div></div>
+    <div class="step-row"><div class="sn sn-p">4</div><div class="sc"><h4>Coach dengan pertanyaan — bukan jawaban</h4><p>Setiap kali anggota membawa masalah, tanya dulu: "Menurut kamu apa yang sebaiknya dilakukan?" Kalau selalu memberi jawaban, kamu sedang membangun ketergantungan, bukan pemimpin.</p></div></div>
+    <div class="step-row"><div class="sn sn-p">5</div><div class="sc"><h4>Berikan waktu kepada yang konsisten — bukan yang bermasalah</h4><p>Berikan waktu pada anggota yang sudah menunjukkan usaha. Bantu yang lain dengan sistem, bukan perhatian personal.</p></div></div>
+  </div>
+  <div class="alert alert-r">
+    <h4>Larangan keras untuk upline Diamond Academy</h4>
+    <ul>
+      <li>Jangan lakukan expose untuk anggota yang sudah lebih dari 3 bulan — mereka harus melakukannya sendiri</li>
+      <li>Jangan rayakan kehadiran saja — rayakan tindakan dan hasil</li>
+      <li>Jangan berikan lebih dari satu tindakan dalam satu sesi coaching</li>
+      <li>Jangan abaikan anggota yang tidak aktif lebih dari 2 minggu — hubungi dan dapatkan jawaban yang jelas</li>
+      <li>Jangan gunakan motivasi sebagai pengganti tindakan konkret</li>
+    </ul>
+  </div>
+  <div class="alert alert-g">
+    <h4>Pengingat terpenting untuk kamu sebagai upline</h4>
+    <p>Upline yang berhasil adalah upline yang anggota-anggotanya bisa berfungsi tanpa menghubungi mereka setiap hari. Kalau anggota kamu tidak bisa melakukan expose tanpa kamu — kamu yang gagal sebagai upline, bukan mereka yang gagal. Sistem Diamond Academy ada untuk menggantikan ketergantungan pada kamu.</p>
+  </div>
+  <div class="sec">Standar minimum upline setiap minggu</div>
+  <div class="g2">
+    <div class="card card-green"><h3>Pantau Club One semua anggota</h3><p>Setiap Rabu — cek status poin. Identifikasi hijau, kuning, merah. Tindakan sesuai status.</p></div>
+    <div class="card card-green"><h3>Satu 1-on-1 per anggota aktif</h3><p>15 menit maksimum. Tiga pertanyaan: jumlah expose, hambatan, tindakan selanjutnya.</p></div>
+    <div class="card card-green"><h3>Hadir Discover ASEA</h3><p>Selasa &amp; Jumat, jam 21.00. Kamu perlu ada untuk mendukung anggota yang membawa prospek.</p></div>
+    <div class="card card-green"><h3>Catat WHY setiap anggota baru</h3><p>Simpan di catatan. WHY ini akan jadi senjata saat mereka mulai kehilangan semangat.</p></div>
+  </div>
+</div>
+
+</div>
+<script>
+var chk48=[false,false,false,false,false,false,false];
+function showTab(id,btn){
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('show')});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+  document.getElementById('t-'+id).classList.add('show');
+  btn.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function tick48(el,i){
+  chk48[i]=!chk48[i];
+  el.querySelector('.ci-box').classList.toggle('on',chk48[i]);
+  el.classList.toggle('done',chk48[i]);
+  var t=chk48.filter(function(c){return c}).length;
+  document.getElementById('p48').textContent=t+' / 7 selesai';
+}
+</script>
+</body>
+</html>
